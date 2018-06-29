@@ -27,6 +27,10 @@ switch (state){
 	case "Attack":
 		#region Attack State
 		set_state_sprite(s_knight_attack, .6, 0); 
+		
+		if animation_end(){
+			state = "Chase";
+		}
 		break;
 		#endregion
 }

@@ -1,4 +1,4 @@
-/// @description 
+/// @description State Machine
 
 switch state{
 	case "Move":
@@ -38,6 +38,11 @@ switch state{
 		#region Roll State
 			move_and_collide(roll_speed, 0);
 			set_state_sprite(s_skeleton_roll, 0.8, 0);
+			
+			// Transition back to Move
+			if animation_end(){
+				state = "Move";
+			}
 		#endregion
 		break;
 		
@@ -48,6 +53,11 @@ switch state{
 			// Switch to Attack 1 state
 			if input.attack and animation_hit_frame_range(2, 5){
 				state = "Attack 2";
+			}
+			
+			// Transition back to Move
+			if animation_end(){
+				state = "Move";
 			}
 		#endregion
 		break;
@@ -61,12 +71,22 @@ switch state{
 			   and animation_hit_frame_range(2, 6){
 				state = "Attack 3";
 			}
+			
+			// Transition back to Move
+			if animation_end(){
+				state = "Move";
+			}
 		#endregion
 		break;
 		
 	case "Attack 3":
 		#region Attack 3 State
 			set_state_sprite(s_skeleton_attack_three, 0.7, 0);
+			
+			// Transition back to Move
+			if animation_end(){
+				state = "Move";
+			}
 		#endregion
 		break;	
 }
