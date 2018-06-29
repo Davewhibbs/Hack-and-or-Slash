@@ -1,5 +1,5 @@
-///@arg xSpeed
-///@arg ySpeed
+///@param xSpeed
+///@param ySpeed
 
 var xSpeed = argument0 * image_xscale;
 var ySpeed = argument1;

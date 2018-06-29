@@ -3,31 +3,31 @@
 switch state{
 	case "Move":
 		#region Move State
-			if(keyboard_check(vk_right)){
+			if(input.right){
 				image_xscale = 1;
 				move_and_collide(run_speed, 0);				// Distance moved per frame 5
 				sprite_index = s_skeleton_run;
 				image_speed = 0.6;
 			}
-			else if (keyboard_check(vk_left) and not place_meeting(x - 5, y, o_wall)){
+			else if (input.left and not place_meeting(x - 5, y, o_wall)){
 				image_xscale = -1;
 				move_and_collide(run_speed, 0);	
 				sprite_index = s_skeleton_run;
 				image_speed = 0.6;
 			}
 	
-			if not keyboard_check(vk_right) and not keyboard_check(vk_left){
+			if not input.right and not input.left{
 				sprite_index = s_skeleton_idle;
 				image_speed = 0.4;
 			}
 	
 			// Switch to roll state when spacebar is pressed
-			if keyboard_check_pressed(vk_shift){
+			if input.roll{
 				state = "Roll";
 			}
 			
 			// Switch to Attack 1 state
-			if keyboard_check_pressed(vk_space){
+			if input.attack{
 				state = "Attack 1";
 			}
 			
@@ -46,7 +46,7 @@ switch state{
 			set_state_sprite(s_skeleton_attack_one, 0.7, 0);
 			
 			// Switch to Attack 1 state
-			if keyboard_check_pressed(vk_space) and animation_hit_frame_range(2, 5){
+			if input.attack and animation_hit_frame_range(2, 5){
 				state = "Attack 2";
 			}
 		#endregion
@@ -57,7 +57,7 @@ switch state{
 			set_state_sprite(s_skeleton_attack_two, 0.7, 0);
 			
 			// Switch to Attack 3 state
-			if keyboard_check_pressed(vk_space) 
+			if input.attack 
 			   and animation_hit_frame_range(2, 6){
 				state = "Attack 3";
 			}

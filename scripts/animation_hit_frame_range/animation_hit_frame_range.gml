@@ -1,5 +1,5 @@
-///@arg low
-///@arg high
+///@param low
+///@param high
 
 var low = argument0;
 var high = argument1;
