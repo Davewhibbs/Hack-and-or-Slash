@@ -1,3 +1,5 @@
 state = "Chase";
 
-attack_radius = 42;
+attack_range = 42;
+
+chase_speed = 1;

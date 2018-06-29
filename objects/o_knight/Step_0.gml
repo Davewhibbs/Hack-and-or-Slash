@@ -1,5 +1,6 @@
 switch (state){
 	case "Chase":
+		#region Chase State
 		set_state_sprite(s_knight_walk, .4, 0);
 		
 		// exit out of the chase state
@@ -12,14 +13,20 @@ switch (state){
 		// Get distance to player
 		var distance_to_player = point_distance(x, y, o_skeleton.x, o_skeleton.y);
 		
-		// Chase the player when too far
-		if distance_to_player > attack_radius 
+		// Attack the player when close enough
+		if distance_to_player <= attack_range 
 		{
-			move_and_collide(1, 0);	
+			state = "Attack";
+		}else
+		{
+			move_and_collide(chase_speed, 0);
 		}
-		
-		
-		
 		break;
-	
+		#endregion
+		
+	case "Attack":
+		#region Attack State
+		set_state_sprite(s_knight_attack, .6, 0); 
+		break;
+		#endregion
 }
