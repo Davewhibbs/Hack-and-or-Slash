@@ -1,6 +1,6 @@
-///param sprite
-///param image_speed
-///param image_index
+///@param sprite
+///@param image_speed
+///@param image_index
 
 var new_sprite = argument0;
 var new_speed = argument1;
