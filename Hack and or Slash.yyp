@@ -39,6 +39,14 @@
             }
         },
         {
+            "Key": "09d07bdb-b4e4-4fce-bd4a-12859f8ebd81",
+            "Value": {
+                "id": "775fb9e8-e8c4-4882-9968-f55e4ed37023",
+                "resourcePath": "sprites\\s_knight_attack_damage\\s_knight_attack_damage.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "0c1985f3-a7e4-4b8d-bc04-67e163daa825",
             "Value": {
                 "id": "a94eccc3-fa57-4f84-a77b-d70743a3a54a",
@@ -388,6 +396,14 @@
                 "id": "8704d621-e36e-4085-8e11-69f8953fb380",
                 "resourcePath": "scripts\\get_input\\get_input.yy",
                 "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "d3cf77ea-0b83-4d1f-af82-a5ade467cafc",
+            "Value": {
+                "id": "12adc19a-d9a9-44dd-b698-a47ec1e2f92e",
+                "resourcePath": "objects\\o_lifeform\\o_lifeform.yy",
+                "resourceType": "GMObject"
             }
         },
         {
