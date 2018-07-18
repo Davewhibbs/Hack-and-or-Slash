@@ -29,7 +29,7 @@ switch (state){
 		set_state_sprite(s_knight_attack, .6, 0); 
 		
 		if animation_hit_frame(4){
-			create_hitbox(x, y, id, s_knight_attack_damage, 4, 4, image_speed * 4, image_xscale);
+			create_hitbox(x, y, id, s_knight_attack_damage, 4, 10, image_speed * 4, image_xscale);
 		}
 		
 		if animation_end(){

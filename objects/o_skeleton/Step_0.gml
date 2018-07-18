@@ -52,7 +52,7 @@ switch state{
 			
 			// Create hitbox
 			if animation_hit_frame(0){
-				create_hitbox(x, y, id, s_skeleton_attack_one_damage, 4, 4, image_speed * 4, image_xscale);
+				create_hitbox(x, y, id, s_skeleton_attack_one_damage, 4, 5, image_speed * 4, image_xscale);
 			}
 			
 			// Switch to Attack 1 state
@@ -73,7 +73,7 @@ switch state{
 			
 			// Create hitbox
 			if animation_hit_frame(1){	// attack 2 comes out on second frame
-				create_hitbox(x, y, id, s_skeleton_attack_two_damage, 4, 4, image_speed * 4, image_xscale);
+				create_hitbox(x, y, id, s_skeleton_attack_two_damage, 4, 5, image_speed * 4, image_xscale);
 			}
 			
 			// Switch to Attack 3 state
@@ -95,7 +95,7 @@ switch state{
 			
 			// Create hitbox
 			if animation_hit_frame(2){ // attack three comes out on third frame
-				create_hitbox(x, y, id, s_skeleton_attack_three_damage, 4, 4, image_speed * 4, image_xscale);
+				create_hitbox(x, y, id, s_skeleton_attack_three_damage, 4, 8, image_speed * 4, image_xscale);
 			}
 			
 			// Transition back to Move

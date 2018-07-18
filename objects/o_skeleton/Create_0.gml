@@ -1,3 +1,5 @@
+event_inherited();		// Extend Lifeform create event
+
 image_speed = .4;		// Idle animation speed
 
 state = "Move";			// Start in the Move state
